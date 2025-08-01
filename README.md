@@ -1,7 +1,12 @@
 # usb2can_automount
 Repository with usb to can adapter automount utile
 
-Как теперь использовать этот скрипт:
+# Предварительные условия
+Убедитесь что установленны утилиты работы с CAN шиной
+
+sudo apt install van-utils
+
+# Как теперь использовать этот скрипт:
 Скопируйте три файла в одной папке: install_slcan_scripts.sh, slcan_up.sh, slcan_down.sh и 99-slcan.rules.
 Содержимое 99-slcan.rules также должно быть с плейсхолдерами , и <Serial_Number>. Сделайте install_slcan_scripts.sh исполняемым:
 
