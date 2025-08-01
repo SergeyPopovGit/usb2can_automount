@@ -1,0 +1,8 @@
+# Rule for connecting slcan device
+# Replace <VendorID>, <ProductID>, and <Serial_Number> with your device's actual values.
+# You can find these values using the command: udevadm info -a /dev/ttyUSBX (replace X with your device number)
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="<VendorID>", ATTRS{idProduct}=="<ProductID>", ATTRS{serial}=="<Serial_Number>", RUN+="/usr/local/bin/slcan_up.sh %k"
+
+# Rule for disconnecting slcan device
+# Replace <VendorID>, <ProductID>, and <Serial_Number> with your device's actual values.
+ACTION=="remove", SUBSYSTEM=="tty", ATTRS{idVendor}=="<VendorID>", ATTRS{idProduct}=="<ProductID>", ATTRS{serial}=="<Serial_Number>", RUN+="/usr/local/bin/slcan_down.sh %k"
