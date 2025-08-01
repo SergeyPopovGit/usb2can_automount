@@ -3,8 +3,9 @@ Repository with usb to can adapter automount utile
 
 # Предварительные условия
 Убедитесь что установленны утилиты работы с CAN шиной
-
-sudo apt install van-utils
+```
+sudo apt install can-utils
+```
 
 # Как теперь использовать этот скрипт:
 Скопируйте три файла в одной папке: install_slcan_scripts.sh, slcan_up.sh, slcan_down.sh и 99-slcan.rules.
